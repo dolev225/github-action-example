@@ -1,12 +1,18 @@
-name: hello-actions
+name: ci
 
 on:
   push:
 
 jobs:
-  hello:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print message
-        run: echo "Hello GitHub Actions"
+      - run: echo "running tests"
+
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - run: echo "building app"
