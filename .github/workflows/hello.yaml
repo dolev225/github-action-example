@@ -3,7 +3,8 @@ name: hello-actions
 on:
   push:
 
-
+env:
+  environment: dev
 
 jobs:
   hello:
@@ -15,8 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: hello
-    env:
-      environment: dev
+
     steps:
       - name: do build  
         run: echo ${{ vars.APP_ENV }} 
