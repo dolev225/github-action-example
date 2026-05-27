@@ -9,12 +9,13 @@ jobs:
 
     steps:
       - name: Checkout repository
+        
         uses: aquasecurity/trivy-action@v0.36.0
         with:
           version: latest # or a specific version like 'v0.64.0'
           cache: false 
       - name: Run Trivy version
-        run: trivy --version
+        run: trivy --help
 
       - name: Run Trivy scan
         run: trivy fs .
