@@ -1,15 +1,22 @@
-name: marketplace-hello-world
+name: hello-actions
 
 on:
   push:
-  workflow_dispatch:
 
+env:
+  APP_ENV: production
+  
 jobs:
-  hello-world:
+  hello:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run Hello World JS Action
-        uses: actions/hello-world-javascript-action@main
-        with:
-          who-to-greet: "GitHub Actions Student"
+      - name: Print message
+        run: echo "Hello GitHub Actions"
+  build:
+    runs-on: ubuntu-latest
+    needs: hello
+
+    steps:
+      - name: do build  
+        run: echo $APP_ENV
