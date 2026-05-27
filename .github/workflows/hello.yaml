@@ -19,4 +19,4 @@ jobs:
 
     steps:
       - name: do build  
-        run: echo ${{var.APP_ENV}}
+        run: echo ${{vars.APP_ENV}}
