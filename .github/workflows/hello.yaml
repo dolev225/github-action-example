@@ -12,4 +12,4 @@ jobs:
       - name: Run Hello World JS Action
         uses: actions/hello-world-javascript-action@main
         with:
-          who-to-greet: "GitHub Actions Student"
+          who-to-greet: "GitHub Actions dolev"
