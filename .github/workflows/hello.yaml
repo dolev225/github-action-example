@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print message2
+      - name: Print message
         run: echo "Hello GitHub Actions"
   build:
     runs-on: ubuntu-latest
@@ -19,4 +19,4 @@ jobs:
 
     steps:
       - name: do build  
-        run: echo $APP_ENV
+        run: echo ${{ var.API_TOKEN }}
