@@ -19,4 +19,4 @@ jobs:
 
     steps:
       - name: do build  
-        run: echo ${{ var.API_TOKEN }}
+        run: echo ${{var.APP_ENV}}
