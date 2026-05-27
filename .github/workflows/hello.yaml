@@ -4,7 +4,7 @@ on:
   push:
 
 env:
-  APP_ENV: dev
+  environment: dev
 
 jobs:
   hello:
