@@ -1,0 +1,21 @@
+name: trivy-scan
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          version: latest # or a specific version like 'v0.64.0'
+          cache: false 
+      - name: Run Trivy version
+        run: trivy --version
+
+      - name: Run Trivy scan
+        run: trivy fs .
+       
