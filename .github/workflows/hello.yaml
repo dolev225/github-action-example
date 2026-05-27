@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print message
+      - name: Print message2
         run: echo "Hello GitHub Actions"
   build:
     runs-on: ubuntu-latest
