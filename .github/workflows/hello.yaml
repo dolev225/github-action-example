@@ -9,19 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js and Cache
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm' 
-
-      - name: Install dependencies
-        run: npm ci
-
       - name: Run Hello World JS Action
         uses: actions/hello-world-javascript-action@main
         with:
-          who-to-greet: "GitHub Actions dolev"
+          who-to-greet: "GitHub Actions Student"
