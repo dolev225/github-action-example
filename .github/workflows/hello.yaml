@@ -4,8 +4,8 @@ on:
   push:
 
 env:
-  APP_ENV: production
-  
+  APP_ENV: dev
+
 jobs:
   hello:
     runs-on: ubuntu-latest
